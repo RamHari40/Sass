@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: skyblue;
+    font-family: Arial, Helvetica, sans-serif;
+} 
+
+p {
+    line-height: 25px;
+}
+
+nav {
+    height: 10vh;
+    background-color: #333;
+    display: flex;
+    justify-content: space-around;
+
+    .logo {
+        padding-top: 30px;
+        color: white;
+    }
+
+    .nav-bar ul {
+        color: white;
+        padding-top: 30px;
+
+        li {
+            display: inline;
+            list-style-type: none;
+            padding: 35px;
+
+            &:hover {
+                font-size: 20px;
+                background-color: yellowgreen;
+                cursor: grab;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+}
+
+.hero {
+    background: linear-gradient(to right, #7739aa, #143852, rgb(255, 0, 157), green);
+    /*border: 1px solid red;*/
+    height: 100vh;
+
+    .box {
+        /*border: 1px solid green;*/
+        position: relative;
+        height: 200px;
+        width: 200px;
+        background-color: white;
+
+        animation-name: lokendra-animation2;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-fill-mode: forward;
+    }
+
+    .container {
+        display: flex;
+        /*border: 1px solid blue;*/
+        height: 100%;
+
+        .welcome {
+            padding: 165px 50px;
+            
+            h1 {
+                color: white;
+                font-size: 50px;
+            }
+        }
+        .info {
+            padding: 165px 50px;
+            font-size: 20px;
+            
+            p {
+                color: white;
+                /*line-height: 25px;*/
+            }
+        }
+    }
+}
+
+@keyframes lokendra-animation1 {
+    from {
+        top: 0px;
+        width: 200px;
+    }
+
+    to {
+        top: 800px;
+        width: 500px;
+        background: green;
+    }
+}
+
+@keyframes lokendra-animation2 {
+    0% {
+        left: 0;
+        top: 0;
+        background: white;
+    }
+    25% {
+        top: 0;
+        left: 700px;
+        background: lime;
+        border-radius: 50% 0 0 0;
+    }
+
+    50% {
+        left: 700px;
+        top: 700px;
+        background: blue;
+        border-radius: 50% 50% 0 0;
+        background-image: url('/Images/img-4.png');
+        //background-size: cover;
+        background-position: center center;
+        object-fit: cover;
+        width: 300px;
+        height: 300px;
+        background-repeat: no-repeat;
+    }
+
+    75% {
+        left: 0;
+        top: 700px;
+        background: purple;
+        border-radius: 50% 50% 50% 0;
+        background-image: url('/Images/img-5.png');
+        //background-size: cover;
+        object-fit: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+    100% {
+        left: 0;
+        top: 0;
+        background: white;
+        border-radius: 50%;
+        background-image: url('/Images/pic-1.png');
+        background-size: cover;
+        background-position: center center;
+    }
+}
